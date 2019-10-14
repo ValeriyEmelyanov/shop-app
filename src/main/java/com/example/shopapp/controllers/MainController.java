@@ -39,4 +39,10 @@ public class MainController {
         model.addAttribute("product", product);
         return "details";
     }
+
+    @GetMapping("/products/delete/{id}")
+    public String deleteById(@PathVariable("id") Long id) {
+        productService.deleteById(id);
+        return "redirect:/shop";
+    }
 }

@@ -22,4 +22,13 @@ public class ProductRepository {
         products.add(new Product(2L, "Cheese", 320));
         products.add(new Product(3L, "Ball", 200));
     }
+
+    public void deleteById(Long id) {
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getId().equals(id)) {
+                products.remove(i);
+                return;
+            }
+        }
+    }
 }

@@ -24,4 +24,8 @@ public class ProductService {
     public Product getById(Long id) {
         return productRepository.getProducts().get(id.intValue() - 1);
     }
+
+    public void deleteById(Long id) {
+        productRepository.deleteById(id);
+    }
 }

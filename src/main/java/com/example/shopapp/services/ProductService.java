@@ -18,11 +18,11 @@ public class ProductService {
     }
 
     public List<Product> getAll() {
-        return productRepository.getProducts();
+        return productRepository.findAll();
     }
 
     public Product getById(Long id) {
-        return productRepository.getProducts().get(id.intValue() - 1);
+        return productRepository.getOne(id);
     }
 
     public void deleteById(Long id) {

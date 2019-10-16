@@ -1,7 +1,7 @@
 
 DELETE FROM products;
 
-INSERT INTO products (title, price) VALUES
-('Milk', 80),
-('Cheese', 320),
-('Coca-cola', 90);
+INSERT INTO products (id, title, price) VALUES
+(1, 'Milk', 80),
+(2, 'Cheese', 320),
+(3, 'Coca-cola', 90);

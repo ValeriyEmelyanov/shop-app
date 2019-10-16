@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -33,13 +32,6 @@ public class MainController {
         List<Product> products = productService.getAll();
         model.addAttribute("products", products);
         return "shop";
-    }
-
-    @GetMapping("/cart")
-    public String cartPage(Model model) {
-        List<Product> products = new ArrayList<>();
-        model.addAttribute("products", products);
-        return "cart";
     }
 
     @GetMapping("/details/{id}")

@@ -32,6 +32,11 @@ public class MainController {
         return "login";
     }
 
+    @GetMapping("/admin")
+    public String dashboardPage() {
+        return "dashboard";
+    }
+
     @GetMapping("/shop")
     public String shopPage(Model model) {
         List<Product> products = productService.getAll();

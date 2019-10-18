@@ -9,7 +9,9 @@ INSERT INTO products (id, title, price) VALUES
 (3, 'Coca-cola', 90);
 
 INSERT INTO users (username, password, enabled) VALUES
-('admin', '{noop}12345', true);
+('admin', '{noop}12345', true),
+('user', '{noop}12345', true);
 
 INSERT INTO authorities (username, authority) VALUES
-('admin', 'ROLE_ADMIN');
+('admin', 'ROLE_ADMIN'),
+('user', 'ROLE_USER');                                                     ;

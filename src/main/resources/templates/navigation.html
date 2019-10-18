@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
 <head>
     <meta charset="UTF-8">
     <title>Shop application</title>
@@ -23,6 +24,17 @@
                 </li>
                 <li class="nav-item" th:classappend="${activeTab == 'Cart' ? 'active' : ''}">
                     <a class="nav-link" th:href="@{/cart}">Cart</a>
+                </li>
+                <li class="nav-item" sec:authorize="hasRole('ADMIN')"  th:classappend="${activeTab == 'Dashboard' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/admin}">Dashboard</a>
+                </li>
+                <li class="nav-item" sec:authorize="isAnonymous()">
+                    <a class="nav-link btn btn-outline-success" th:href="@{/login}">Login</a>
+                </li>
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <form th:action="@{/logout}" method="POST">
+                        <input type="submit" class="btn btn-outline-warning" value="Logout" />
+                    </form>
                 </li>
             </ul>
         </div>

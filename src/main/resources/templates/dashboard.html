@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Details page</title>
+    <title>Dashboard</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -12,11 +12,11 @@
 <body>
 
 <div class="container">
-    <div th:replace="~{navigation :: navigation(Home)}" />
+    <div th:replace="~{navigation :: navigation(Dashboard)}" />
 
-    <h1>Details</h1>
-    <span th:text="${product.id + ' ' + product.title + ' ' + product.price}"/>
+    <h1>Dashboard</h1>
 </div>
+
 
 </body>
 </html>

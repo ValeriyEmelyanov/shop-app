@@ -1,7 +1,7 @@
 
 DELETE FROM products;
-DELETE FROM users;
 DELETE FROM authorities;
+DELETE FROM users;
 
 INSERT INTO products (id, title, price) VALUES
 (1, 'Milk', 80),

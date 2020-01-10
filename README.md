@@ -1,11 +1,11 @@
 # Internet Shop
 
-This application uses:
+This CRUD application uses:
 - Spring Boot, Spring Data JPA, Spring Security
 - Using Maven to build Spring Project
 - Thymeleaf
 - Bootstrap
-- PosgreSQL
+- PostgreSQL
 
 ### Usefull references
 The webinar "Веб-разработка на Java + Spring Boot" is taken as a basis:
